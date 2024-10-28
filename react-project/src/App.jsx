@@ -1,13 +1,21 @@
 import "./App.css";
-
-let language = "React";
-let moon = "🌙";
+function Header(props) {
+  return (
+    <header>
+      <h1>{props.name}'s Kitchen</h1>
+      <p>Copyright {props.year}</p>
+    </header>
+  );
+}
 
 function App() {
   return (
-    <h1>
-      Hello {language.toUpperCase()} {moon}!!
-    </h1>
+    <div>
+      <Header name="Daniel" year="2024" />
+      <main>
+        <h2>We serve the most delicious food around</h2>
+      </main>
+    </div>
   );
 }
 
